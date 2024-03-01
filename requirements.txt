@@ -1,0 +1,5 @@
+langchain
+langchain_google_genai
+dotenv
+flask
+flask_restful
