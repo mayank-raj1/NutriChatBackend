@@ -1,5 +1,4 @@
-langchain
+Flask~=3.0.2
+langchain~=0.1.9
+python-dotenv~=1.0.1
 langchain_google_genai
-dotenv
-flask
-flask_restful

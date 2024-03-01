@@ -1,12 +1,7 @@
-import json
-from typing import List
-
 from langchain_core.output_parsers import JsonOutputParser
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.prompts import ChatPromptTemplate
-from langchain.schema.output_parser import StrOutputParser
 from dotenv import load_dotenv
-from pydantic import BaseModel
 
 load_dotenv()
 llm = ChatGoogleGenerativeAI(model="gemini-pro")
@@ -44,10 +39,9 @@ sampleRecipe = '''
 def get_recipe_names(user_data):
     output_parser_user = JsonOutputParser()
     template = ChatPromptTemplate.from_template(
-        'For this user, suggest 15 recipes. Only output names in JSON format such as this: ["sandwich", "pizza", "salad"]. Here is the user:  {user}')
+        'For this user, suggest 10 recipes. Only output names in JSON format such as this: ["sandwich", "pizza", "salad"]. Here is the user:  {user}')
     recommendation_chain = template | llm | output_parser_user
     return recommendation_chain.invoke({"user": user_data})
-
 def get_recipe(recipe):
     output_parser_recipe = JsonOutputParser()
     template_recipe_response = ChatPromptTemplate.from_template(

@@ -17,4 +17,4 @@ class Suggestions(flask_restful.Resource):
 api.add_resource(Suggestions, "/suggest")
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
