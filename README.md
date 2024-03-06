@@ -12,6 +12,10 @@ Welcome to the NutriChat Backend API! This powerful tool is designed to generate
 2. **Gemini 🤖:** Powered by Google's Gemini Pro model, delivering top-notch recipe recommendations.
 3. **Langchain 🦜🔗:** Leveraging Langchain for structured interactions with AI models, ensuring smooth communication.
 
+### System Diagram
+
+[![backend-API-Diagram.png](https://i.postimg.cc/kGGmZkh3/backend-API-Diagram.png)](https://postimg.cc/zbs6HPr0)
+
 ### Chaining Usage 🔗
 
 Chaining simplifies interactions with AI models, ensuring seamless recipe generation. Here's how it works:
